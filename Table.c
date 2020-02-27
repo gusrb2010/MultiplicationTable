@@ -28,8 +28,20 @@ int main()
       printf("Press CTRL-C to quit.\n");
       // prompt user for input
       printf("Please enter integer value: ");
-      // read and store input
-      scanf("%d", &number);
+      // read and store input (unsafe method)
+      // scanf("%d", &number);
+      // read and store input with fgets
+      char line[256];
+      if(fgets(line, sizeof(line), stdin)){
+         if(1 == sscanf(line, "%d ", &number)){
+            // input is valid integer
+         }
+         else{
+            // user input error
+            printf("Integer must be 0-9!\n\n");
+            continue;
+         }
+      }
       // check for valid input (0-9)
       if(number < 0 || number > 9){
          printf("Integer must be 0-9!\n\n");
