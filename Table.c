@@ -95,6 +95,7 @@ int main()
          printf("\n"); // increment to next row
       }
       // display table bottom border
+
       printf("   +"); //  border row, left hand spacing = 3 spaces
       for (int i = 0; i <= number; i++)
       {
