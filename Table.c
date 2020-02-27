@@ -1,4 +1,7 @@
 #include <stdio.h>
+// displays multiplication table based on user integer input
+// only accepts integers 0-9 because of spacing issues cased by 3 digit numbers
+//
 // Example output for input: 5
 //      0  1  2  3  4  5
 //    +------------------
@@ -15,8 +18,12 @@ int main()
    // infinite loop for easy recalculations
    while (1)
    {
-      // display welcome message
-      printf("Welcome to Multiplication Table Generator!\n");
+      if(welcome == 0){
+         // display welcome message
+         printf("Welcome to Multiplication Table Generator!\n");
+         welcome = -1; // show welcome only once
+      }
+      
       // terminate program prompt
       printf("Press CTRL-C to quit.\n");
       // prompt user for input
