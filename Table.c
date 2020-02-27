@@ -30,6 +30,11 @@ int main()
       printf("Please enter integer value: ");
       // read and store input
       scanf("%d", &number);
+      // check for valid input (0-9)
+      if(number < 0 || number > 9){
+         printf("Integer must be 0-9!\n\n");
+         continue;
+      }
       // displays output, indicates which table will be made
       printf("Calculating Multiplication Table for... %d\n", number);
       printf("     "); //  top row, left hand spacing, 5 spaces
