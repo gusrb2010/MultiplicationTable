@@ -56,6 +56,7 @@ int main()
       {
          printf("%d  ", i);
       }
+      // display table top border
       printf("\n");   // increment to border row (+-----)
       printf("   +"); //  border row, left hand spacing, 3 spaces
       for (int i = 0; i <= number; i++)
@@ -93,6 +94,13 @@ int main()
          }
          printf("\n"); // increment to next row
       }
+      // display table bottom border
+      printf("   +"); //  border row, left hand spacing = 3 spaces
+      for (int i = 0; i <= number; i++)
+      {
+         printf("---");
+      }
+      printf("\n"); // increment to next row
    }
    return 0;
 }
